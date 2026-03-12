@@ -1,0 +1,6 @@
+models\Tag.class
+models\Category.class
+models\Pet.class
+api\BaseApiClient.class
+data\InvalidPetDataBuilder.class
+data\PetDataBuilder.class

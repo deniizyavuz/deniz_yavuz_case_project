@@ -1,0 +1,54 @@
+# Performance Test Report
+
+# Target
+
+Search module of n11.com
+
+# Tool
+
+Locust
+
+# Test Scenarios
+
+1. Visit n11.com (Landing Page)
+2. Search Products (Search Page)
+3. Autocomplete suggestions (Autocomplete API)
+
+# Test Data
+
+Keywords used:
+
+klavye
+telefon
+samsung
+kulaklık
+iphone
+""
+" "
+.?+!\*é"@
+test%
+üşğa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+teelefoğn
+
+# Metrics Collected
+
+- Response Time
+- Error Rate
+- Requests per second
+- 95th percentile
+
+# Results
+
+Average response time: ~101 ms (Landing Page:200ms, Search Page: 52ms, Autocomplete Apı: 52ms)
+Error rate: %100, due to bot protection (HTTP 403)
+
+# Observation
+
+The website appears to implement bot protection mechanisms which block automated traffic.
+
+# Recommendation
+
+During the load testing attempts, HTTP 403 responses were observed from the production endpoint.
+This indicates that the website uses bot protection / WAF mechanisms that block automated traffic.
+In real-world performance testing scenarios, load tests should be executed on a staging environment or with whitelisted IP addresses.
