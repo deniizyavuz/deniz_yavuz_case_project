@@ -1,11 +1,13 @@
-Project Structure
+### Project Structure
+
+```
 deniz_yavuz_case_project
 │
 ├─ insider-ui-tests → Selenium UI automation
 ├─ petstore-api-tests → REST API automation tests
 ├─ performance_test → Locust performance testing
-│
 └─ report → Test reports
+```
 
 ### 1. UI Test Automation
 
@@ -91,8 +93,11 @@ Maven
 
 ## Run API Tests
 
+```
 cd petstore-api-tests
+
 mvn clean test
+```
 
 ### 3. Performance Testing
 
@@ -112,51 +117,48 @@ Locust
 
 ## Performance Test Structure
 
+```
 performance_test
 │
 ├─ locust
 │ └─ locustfile.py
 │
-├─ data
-│ └─ test data
-│
-├─ docs
-│ └─ test scenarios
-│
-└─ report
-└─ performance reports
+└─ data
+  └─ keywords
+```
 
 ## Run Performance Tests
 
 Install Locust
+
+```
 pip install locust
 locust -f locust/locustfile.py --host https://www.n11.com
+```
 
 Then open:
 
+```
 http://localhost:8089
-Test Reports
+```
+
+## Test Reports
 
 Test reports are stored in the report directory.
 
+```
 report/
-Notes
+```
 
 The project follows good testing practices:
 
-Page Object Model (UI tests)
-
-Reusable API client
-
-Modular test architecture
-
-Parameterized test flows
-
-Failure screenshot capture
-
-Clean project structure
+- Page Object Model (UI tests)
+- Reusable API client
+- Modular test architecture
+- Parameterized test flows
+- Failure screenshot capture
+- Clean project structure
 
 ### Author
 
-Deniz Yavuz
-QA Engineer Assessment Project
+Deniz Yavuz - QA Engineer - Assessment Project
