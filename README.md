@@ -53,8 +53,10 @@ Page Object Model
 
 ## Run UI Tests
 
+```
 cd insider-ui-tests
 mvn clean test
+```
 
 ### 2. API Test Automation
 
@@ -62,10 +64,12 @@ API tests implemented using Java + RestAssured + JUnit against the Swagger Petst
 
 ## Tested Endpoints
 
+```
 POST /pet → Create pet
 GET /pet/{id} → Retrieve pet
 PUT /pet → Update pet
 DELETE /pet/{id} → Delete pet
+```
 
 ## Test Scenarios
 
